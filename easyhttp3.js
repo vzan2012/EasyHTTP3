@@ -18,12 +18,9 @@ class EasyHTTP {
     const response = await fetch(url, {
       method: "POST",
       headers: {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json"
-        },
-        body: JSON.stringify(data)
-      }
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify(data)
     });
 
     const respData = await response.json();
@@ -32,29 +29,28 @@ class EasyHTTP {
 
   // Make a HTTP PUT Request
   async put(url, data) {
-      const response = await fetch(url, {
-        method: "PUT",
-        headers: {
-          "Content-type": "application/json"
-        },
-        body: JSON.stringify(data)
-      });
+    const response = await fetch(url, {
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
 
-      const respData = await response.json();
-      return respData;
+    const respData = await response.json();
+    return respData;
   }
 
   // Make a HTTP Delete Request
   async delete(url) {
-      const response = await fetch(url, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json"
-        }
-      });
+    const response = await fetch(url, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
 
-      const respData = await 'Resource Deleted';
-      return respData;
+    const respData = await "Resource Deleted";
+    return respData;
   }
 }
- 
